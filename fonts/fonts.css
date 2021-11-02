@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Toyota";
+    src: url("ToyotaTypeRegular.eot");
+    src: url("ToyotaTypeRegular.eot?#iefix") format("embedded-opentype"),
+    url("ToyotaTypeRegular.woff") format("woff"),
+    url("ToyotaTypeRegular.woff2") format("woff2"),
+    url("ToyotaTypeRegular.ttf") format("truetype"),
+    url('ToyotaTypeRegular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Toyota";
+    src: url("ToyotaTypeSemibold.eot");
+    src: url("ToyotaTypeSemibold.eot?#iefix") format("embedded-opentype"),
+    url("ToyotaTypeSemibold.woff") format("woff"),
+    url("ToyotaTypeSemibold.woff2") format("woff2"),
+    url("ToyotaTypeSemibold.ttf") format("truetype"),
+    url('ToyotaTypeSemibold.svg') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ToyotaTypeBook";
+    src: url("ToyotaTypeBook.eot");
+    src: url("ToyotaTypeBook.eot?#iefix") format("embedded-opentype"),
+    url("ToyotaTypeBook.woff") format("woff"),
+    url("ToyotaTypeBook.woff2") format("woff2"),
+    url("ToyotaTypeBook.ttf") format("truetype"),
+    url('ToyotaTypeBook.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: "Technology";
+    src: url("TechnologyBold.eot");
+    src: url("TechnologyBold.eot?#iefix") format("embedded-opentype"),
+    url("TechnologyBold.woff") format("woff"),
+    url("TechnologyBold.woff2") format("woff2"),
+    url("TechnologyBold.ttf") format("truetype"),
+    url('TechnologyBold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+

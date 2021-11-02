@@ -1,0 +1,260 @@
+@import 'responsive'
+
+.select
+	&__wrap 
+		position: relative 
+		z-index: 9
+		width: 100%  
+		&:after 
+			position: absolute 
+			top: calc(50% - 8px) 
+			right: 12px 
+			content: '' 
+			width: 12px 
+			height: 12px 
+			border-left: 3px solid #363636 
+			border-bottom: 3px solid #363636 
+			transform: rotate(-45deg) 
+			pointer-events: none 
+			cursor: pointer 
+
+		.select__placeholder
+			border-radius: 8px
+			border: 1px solid #DBDBDB
+
+		.select__list
+			border-radius: 0 0 8px 8px
+			border-color: #DBDBDB
+			border-style: solid
+			border-width: 0 1px 1px 1px
+
+		&.select__wrap--active
+			.select__placeholder
+				border-radius: 8px 8px 0 0
+
+		&.select__wrap--position-top
+			&.select__wrap--active .select__placeholder
+				border-radius: 0 0 8px 8px
+
+			.select__list
+				border-radius: 8px 8px 0 0
+				border-width: 1px 1px 0 1px
+
+		&--panel
+			display: none
+			max-width: 550px
+			margin: 0 auto
+			+media(mdx)
+				display: block
+
+		&--active
+			&:after 
+				top: calc(50% - 1px) 
+				transform: rotate(135deg) 
+			.select__list 
+				opacity: 1 
+				visibility: visible 
+				user-select: auto 
+				max-height: 250px 
+				transition: max-height 0.2s ease-out 
+
+		&--start-active 
+			.select__list 
+				overflow-y: hidden 
+				max-height: 0px 
+
+		&--end-active 
+			.select__list 
+				overflow-y: auto 
+
+		&--position-top 
+			.select__list 
+				top: initial 
+				bottom: 100% 
+
+		&--disabled
+			&:after 
+				position: absolute 
+				content: '' 
+				top: 0 
+				left: 0 
+				width: 100% 
+				height: 100% 
+				background-color: #fff 
+
+		&--product,
+		&--region
+			.select__placeholder
+				font-size: 1.5rem
+				background-image: none
+				padding: 21px 30px
+				padding-left: 18px
+				+media(sm)
+					font-size: 1rem
+					padding: 6px 30px 6px 8px
+
+			&:after
+				width: 16px
+				height: 16px
+				right: 24px
+				border-width: 4px
+				+media(sm)
+					right: 12px
+					width: 12px
+					height: 12px
+					border-width: 3px
+
+			.select__item
+				padding: 0px
+				display: block
+				width: 100%
+				font-size: 1.5rem
+				color: #363636
+				padding: 20px 24px
+				font-family: ImagoProItalic
+				font-weight: normal
+				+media(sm)
+					font-size: 1rem
+					padding: 6px 30px 6px 8px
+
+			.select__list li:not(:last-child)
+				border-bottom: 2px solid #dbdbdb
+
+			.select__list
+				max-height: 265px
+
+		&--region
+			display: none	
+			+media(sm)
+				display: block	
+				max-width: 550px
+				width: 100%	
+				margin: 0 auto
+
+		&--single
+			display: none	
+			max-width: 500px
+			margin: 0 auto
+			+media(mdx)
+				display: block
+
+			.select__item
+				position: relative
+				padding-left: 40px	
+				padding-right: 36px	
+
+			.select__item--active
+				background-color: #e7e7e7
+				color: #363636
+
+			.select__placeholder
+				background-size: auto
+				background-size: 20px 13px
+				background-position: left 8px center
+				background-image: url(../img/icons/tabs/eyes.svg)
+
+
+
+	&__placeholder
+		background-image: url(../img/icons/panel_icon.svg) 
+		background-repeat: no-repeat 
+		background-position: left 12px center
+		background-size: 15px  
+		font-size: 1rem
+		line-height: 1
+		color: #363636
+		background-color: #fff 
+		padding: 6px 30px 6px 13px 
+		padding-left: 40px 
+		line-height: 24px 
+		cursor: pointer 
+		user-select: none 
+		overflow: hidden 
+		text-overflow: ellipsis 
+		white-space: pre 
+		font-family: ImagoProItalic
+		font-weight: normal
+		&.select__item--loader 
+			&:before 
+				right: 40px 
+
+	&__list
+		position: absolute 
+		top: 100% 
+		left: 0 
+		width: 100% 
+		max-height: 250px 
+		overflow: hidden 
+		background-color: #fff 
+		margin: 0 
+		opacity: 0 
+		visibility: hidden 
+		z-index: 1 
+		transition: visibility 0.3s, opacity 0.3s 
+		user-select: none 
+
+	&__item,
+	&__item-search,
+	&__item-search-not-found 
+		font-size: 0.875rem
+		color: #363636
+		padding: 7px 12px 
+		line-height: 24px
+		&:hover 
+			background-color: #e7e7e7
+			color: #363636
+
+	&__item
+		display: block
+		user-select: none 
+		cursor: pointer 
+		transition: 0.3s background-color, 0.3s color 
+			
+
+		&--active 
+			background-color: #e6e7e7
+			color: #363636
+			&:hover 
+				background-color: #e6e7e7
+				color: #363636
+
+		&--disabled 
+			text-decoration: line-through 
+			background-color: #dddddd 
+			color: #a3a3a3 
+			user-select: none 
+			&:hover 
+				background-color: #dddddd
+
+.single
+	.select
+		&__item,
+		&__placeholder
+
+			&--desc,
+			&--details,
+			&--management,
+			&--video,
+			&--add
+				background-repeat: no-repeat
+				background-size: 18px
+				background-position: left 10px center      
+
+			&--desc
+				background-size: 20px 13px
+				background-position: left 8px center
+				background-image: url(../img/icons/tabs/eyes.svg)
+
+			&--details
+				background-size: 13px 20px
+				background-position: left 12px center
+				background-image: url(../img/icons/tabs/details.svg)
+
+			&--management
+				background-image: url(../img/icons/tabs/info.svg)
+
+			&--video
+				background-image: url(../img/icons/tabs/play.svg)
+
+			&--add
+				background-image: url(../img/icons/tabs/plus.svg)

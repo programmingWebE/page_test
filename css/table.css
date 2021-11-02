@@ -1,0 +1,41 @@
+.table {
+	background-color: #593d91;
+}
+
+.table__wrap table {
+	width: 100%;
+}
+
+.table__wrap thead {
+	display: block;
+}
+
+.table__wrap tbody {
+	display: block;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.table__wrap th,
+.table__wrap td {
+	text-align: left;
+}
+
+.table__wrap th {
+	font-size: 43px;
+}
+
+.table__wrap td {
+	font-size: 38px;
+	font-weight: normal;
+	font-family: "ToyotaTypeBook";
+}
+
+.table__wrap thead th:first-child,
+.table__wrap thead td:first-child,
+.table__wrap tbody th:first-child,
+.table__wrap tbody td:first-child {
+	padding-left: 116px;
+	padding-right: 100px;
+}
+

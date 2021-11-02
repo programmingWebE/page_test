@@ -1,0 +1,46 @@
+.timer__name {
+	font-size: clamp(16px, 10vw, 230px);
+	line-height: 1;
+	color: #080400;
+	background-color: #dbae2e;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 18px 10px;
+	padding-bottom: 36px;
+	font-weight: 600;
+	font-family: "Toyota";
+}
+
+.timer__wrap {
+	background-color: #593d91;
+	padding: 12px 10px;
+	padding-bottom: 54px;
+}
+
+.timer__holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timer__item {
+	font-size: clamp(140px, 10vw, 230px);
+	line-height: 1;
+	color: #dbae2e;
+	text-align: center;
+	font-weight: 700;
+	font-family: Technology;
+}
+
+.timer__item:not(:last-child) {
+	position: relative;
+	padding-right: 40px;
+}
+
+.timer__item:not(:last-child):after {
+	position: absolute;
+	content: ':';
+	right: 5px;
+	color: #dbae2e;
+}
+

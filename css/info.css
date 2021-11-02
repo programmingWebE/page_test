@@ -1,0 +1,26 @@
+.info {
+	background-color: #080400;
+}
+
+.info__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 58px;
+	padding-bottom: 64px;
+}
+
+.info__elem img,
+.info__icon img {
+	display: block;
+	width: 100%;
+}
+
+.info__elem {
+	max-width: 408px;
+}
+
+.info__logo {
+	max-width: 177px;
+}
+

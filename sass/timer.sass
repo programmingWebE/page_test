@@ -1,0 +1,43 @@
+@import 'responsive'
+
+.timer
+	&__name
+		font-size: clamp(16px, 10vw, 230px)
+		line-height: 1
+		color: #080400
+		background-color: #dbae2e
+		text-transform: uppercase
+		text-align: center
+		padding: 18px 10px
+		padding-bottom: 36px
+		font-weight: 600
+		font-family: "Toyota"
+
+	&__wrap
+		background-color: #593d91
+		padding: 12px 10px
+		padding-bottom: 54px
+
+	&__holder
+		//max-width: 866px
+		//width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__item
+		//flex-grow: 1
+		font-size: clamp(140px, 10vw, 230px)
+		line-height: 1
+		color: #dbae2e
+		text-align: center
+		font-weight: 700
+		font-family: Technology
+		&:not(:last-child)
+			position: relative
+			padding-right: 40px
+			&:after
+				position: absolute
+				content: ':'
+				right: 5px
+				color: #dbae2e

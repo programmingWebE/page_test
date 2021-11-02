@@ -1,0 +1,74 @@
+@import 'responsive'
+
+
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	min-height: 100vh
+	overflow-x: hidden
+	-webkit-text-size-adjust: 100%
+	color: #363636
+	background-color: transparent
+	position: relative
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: ImagoPro
+	&:after
+		display: none
+		z-index: 5
+		content: 'Переверни'
+		position: fixed
+		bottom: 50vh
+		right: 50vw
+		transform: translate(50%, 50%)
+		
+		@media (orientation: portrait)
+			display: block	
+
+	&:before
+		@media (orientation: portrait)
+			position: absolute
+			z-index: 4
+			content: ' '
+			top: 0px
+			left: 0px
+			width: 100%	
+			height: 100%	
+			background-color: #fff
+
+
+
+* 
+	box-sizing: border-box
+
+*::after,
+*::before
+	box-sizing: border-box
+
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	bottom: 0
+	padding: 0
+	white-space: nowrap
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+
+img
+	max-width: 100%
+	height: auto
+
+.svg-about
+	display: none
+
+.container
+	max-width: 2340px
+	padding: 0 20px
+	margin: 0 auto

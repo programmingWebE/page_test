@@ -1,0 +1,62 @@
+@import 'responsive'
+
+.footer
+	position: relative
+	z-index: 3
+	background-color: #080400
+	padding: 90px 0
+	&__holder
+		max-width: 690px
+		width: 100%
+		position: absolute
+		z-index: 4
+		top: -48px
+		left: 50%
+		transform: translateX(-50%)
+		background-color: #080400
+
+	&__text
+		display: none
+		font-size: 43px
+		color: #dbae2e
+		letter-spacing: 0.07px
+		text-transform: uppercase
+		text-align: center
+		padding-top: 15px
+		font-weight: normal
+		font-family: "ToyotaTypeBook"
+		&--active
+			display: block
+
+	&__wrap
+		display: grid
+		grid-template-columns: 1fr min-content 1fr
+		&:before
+			content: ' '
+
+	&__btn
+		display: none
+		max-width: 304px
+		width: 100%
+		font-size: 55px
+		color: #593d91
+		background-color: #dbad2d
+		border: none
+		border-radius: 10px
+		outline: none
+		padding: 16px 12px
+		letter-spacing: -0.03px
+		text-transform: uppercase
+		text-align: center
+		font-weight: normal
+		font-family: "ToyotaTypeBook"
+		&--active
+			display: block
+
+	&__elem
+		justify-self: end
+		display: block	
+		width: 100px	
+		height: 110px
+		border: none
+		outline: none	
